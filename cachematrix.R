@@ -1,10 +1,13 @@
+## makeCacheMatrix function creates four functions: setting the matrix, gettig the matrix, 
+## setting the inverse of the matrix and getting the inverse of the matrix
+
 ## Function needs matrix as an argument;
-## returns list of 4 items and getinv() returns NULL
+## Function returns list of 4 items and getinv() returns NULL
 ## so, e.g. c <- rbind(c(1, 2), c(1/3, 1/4))
 ##          d <- makeCacheMatrix(c)
 
 makeCacheMatrix <- function(x = matrix()) {
-  m <- NULL
+  m <- NULL     # initialize stored inverse mtx to null
   set <- function(y) {
     x <<- y
     m <<- NULL
